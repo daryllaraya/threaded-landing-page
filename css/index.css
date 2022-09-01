@@ -1,0 +1,31 @@
+/***** IMPORT GOOGLE FONT *****/
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap");
+/***** RESET STYLES *****/
+html {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: inherit;
+  box-sizing: inherit;
+}
+
+ul {
+  padding: 0;
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+/***** BASIC TYPOGRAPHY AND COLOR STYLE FOR COPY TEXT *****/
+body {
+  font-family: "Montserrat", sans-serif;
+  color: #000;
+}
+
+/***** NAVBAR *****/ /***** BUTTON *****/ /***** HERO *****/ /***** FOOTER *****/ /***** FOOTER *****/ /***** NOW TRENDING *****/ /***** NEW ARRIVALS *****/ /***** RECENTLY BOUGHT *****/ /***** YOUR NEXT INSPO *****/ /***** NEWSLETTER *****/

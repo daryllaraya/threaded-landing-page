@@ -1,0 +1,7 @@
+@use 'abstracts' as *;
+
+/***** BASIC TYPOGRAPHY AND COLOR STYLE FOR COPY TEXT *****/
+body {
+  font-family: $base-font-family;
+  color: $black;
+}
