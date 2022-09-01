@@ -1,3 +1,99 @@
 @use 'abstracts' as *;
 
 /***** HERO *****/
+.btn-container {
+    position: absolute;
+    top: 85%;
+    left: 78%;
+    transform: translateY(-85%) translateX(-78%);
+
+    @include md-down {
+        top: 80%;
+        left: 50%;
+        transform: translateY(-80%) translateX(-50%);
+    }
+
+    @include sm-down {
+        top: 75%;
+        transform: translateY(-75%) translateX(-50%);
+    }
+}
+
+.btn-hero {
+    font-size: $base-font-size * 1.25;
+    line-height: $base-line-height * 1.75;
+    background-color: $white;
+    color: $black;
+    font-weight: $fw-semibold;
+    border: none;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+    @include lg-up {
+        font-size: $base-font-size * 1.75;
+        line-height: $base-line-height * 2.15;
+    }
+
+    @include xl-up {
+        font-size: $base-font-size * 2.25;
+        line-height: $base-line-height * 3.15;
+    }
+
+    @include sm-down {
+        font-size: $base-font-size * .75;
+        line-height: $base-line-height * 1.1;
+    }
+
+    &:hover, &:focus, &:active {
+        background-color: darken($white, 10);
+        color: $black;
+    }
+}
+
+.carousel-control-next, .carousel-control-prev {
+    width: 6%;
+}
+
+.carousel-control-next-icon {
+    background-image: url('/assets/icons/slider/next-icon.png');
+}
+
+.carousel-control-prev-icon {
+    background-image: url('/assets/icons/slider/prev-icon.png');
+}
+
+.carousel-control-next-icon, .carousel-control-prev-icon {
+    width: 2rem;
+    height: 2rem;
+
+    @include md-up {
+        width: 3.125rem;
+        height: 3.125rem;
+    }
+}
+
+.carousel-indicators {
+    margin-bottom: calc(#{$base-margin} - 5px);
+
+    @include md-up {
+        margin-bottom: $base-margin * 1.4;
+    }
+
+    @include sm-down {
+        margin-bottom: calc(#{$base-margin} - 12px);
+    }
+}
+
+.carousel-indicators [data-bs-target] {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin-left: calc(#{$base-margin} - 6px);
+    margin-right: calc(#{$base-margin} - 6px);
+
+    @include md-up {
+        width: 15px;
+        height: 15px;
+        margin-left: calc(#{$base-margin} - 3px);
+        margin-right: calc(#{$base-margin} - 3px);
+    }
+}

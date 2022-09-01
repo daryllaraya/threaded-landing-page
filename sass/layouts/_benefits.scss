@@ -1,0 +1,38 @@
+@use 'abstracts' as *;
+
+/***** BENEFITS *****/
+.benefits-container {
+    padding: $base-padding;
+}
+
+.benefits {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: $base-margin;
+
+    @include md-up {
+        justify-content: space-around;
+    }
+
+
+    &-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        @include md-up {
+            flex-direction: row;
+        }
+
+        img {
+            margin-right: $base-margin;
+            width: 30px;
+            height: 30px;
+        }
+
+        span {
+            font-size: calc(#{$base-font-size} - 4px);
+            line-height: calc(#{$base-line-height} + 1px);
+        }
+    }
+}

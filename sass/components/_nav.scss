@@ -1,0 +1,129 @@
+@use 'abstracts' as *;
+
+/***** NAV *****/
+.custom-nav {
+    padding: $base-padding;
+}
+
+.navbar {
+    padding: unset;
+
+    &-toggler {
+        border-radius: unset;
+        border: 1px solid $light-gray;
+    }
+
+    &-collapse {
+        margin-bottom: $base-margin * 3;
+
+        @include lg-up {
+            margin-bottom: unset;
+        }
+    }
+}
+
+.nav {
+    &-link {
+        color: $black;
+        padding: calc(#{$base-padding} - 6px) 0;
+
+        @include md-up {
+            padding: $base-padding 0;
+        }
+
+        &:hover, &:focus {
+            color: lighten($black, 40);
+        }
+    }
+}
+
+/***** NAV LEFT *****/
+.nav-left {
+    .nav {
+        &-link {
+            font-size: calc(#{$base-font-size} - 2px);
+            line-height: calc(#{$base-line-height} + 3px);
+            text-transform: uppercase;
+        }
+
+        &-link.active {
+            color: $black;
+            font-weight: $fw-semibold;
+
+            &:hover, &:focus {
+                color: lighten($black, 40);
+            }
+        }
+    }
+}
+
+.navbar-expand-lg {
+    .nav-left {
+        .nav-link {
+            padding-right: $base-padding * 1.75;
+        }
+    }
+}
+
+/***** NAV RIGHT *****/
+.nav-right {
+    .nav {
+        &-link {
+            font-size: calc(#{$base-font-size} - 2px);
+            line-height: calc(#{$base-line-height} + 3px);
+            text-transform: uppercase;
+
+            &:hover {
+                opacity: 0.8;
+            }
+        }
+    }
+}
+
+.navbar-expand-lg {
+    .nav-right {
+        .nav-link {
+            padding-right: $base-padding * 1.15;
+        }
+    }
+}
+
+/***** DROPDOWN *****/
+.dropdown {
+    align-self: baseline;
+
+    @include lg-up {
+        align-self: center;
+    }
+
+    &-menu {
+        border-radius: unset;
+        padding: unset;
+    }
+
+    &-item {
+        &:hover, &:focus {
+            color: $black;
+            background-color: $light-gray;
+        }
+    }
+
+    &-toggle {
+        border: 1px solid $light-gray;
+        border-radius: $border-round;
+        padding: calc(#{$base-padding} - 6px) 0;
+
+        span {
+            vertical-align: middle;
+        }
+
+        &::after {
+            content: "";
+            background-image: url('/assets/icons/flag/arrow-down-icon.png');
+            border: none;
+            width: 10px;
+            height: 10px;
+            vertical-align: middle;
+        }
+    }
+}

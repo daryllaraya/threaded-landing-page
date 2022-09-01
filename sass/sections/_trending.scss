@@ -1,3 +1,72 @@
 @use 'abstracts' as *;
 
 /***** NOW TRENDING *****/
+.trending-container {
+    text-align: center;
+    margin-bottom: $base-margin * 1.5;
+
+    @include md-up {
+        margin-bottom: $base-margin * 2;
+    }
+
+    p {
+        margin-bottom: $base-margin * 2.5;
+
+        @include md-up {
+            margin-bottom: $base-margin * 3.5; 
+        }
+    }
+}
+
+.trend {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0 $base-margin * 3;
+
+    @include md-up {
+        gap: $base-margin $base-margin * 3;
+    }
+
+    &-category {
+        font-size: calc(#{$base-font-size} + 2px);
+        line-height: calc(#{$base-line-height} + 4px);
+        font-weight: $fw-semibold;
+        text-transform: uppercase;
+        margin-top: $base-margin;
+
+        @include md-up {
+            font-size: calc(#{$base-font-size} + 8px);
+            line-height: calc(#{$base-line-height} + 15px);
+        }
+    }
+}
+
+.hashtag {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: $base-margin;
+
+    @include md-up {
+        gap: $base-margin * 2;
+    }
+
+    .btn-hashtag {
+        border-radius: $border-round;
+        background-color: unset;
+        border: 1px solid $black;
+        color: $black;
+        text-transform: initial;
+        font-size: calc(#{$base-font-size} - 2px);
+        line-height: $base-line-height;
+
+        @include md-up {
+            font-size: $base-font-size;
+            line-height: calc(#{$base-line-height} + 10px);
+        }
+
+        &:hover {
+            background-color: $black;
+            color: $white;
+        }
+    }
+}

@@ -1,0 +1,58 @@
+@use 'abstracts' as *;
+
+/***** SITE WIDE DEALS *****/
+.deals-container {
+    padding: $base-padding * 2.5;
+}
+
+.deals {
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: $base-margin;
+
+    @include md-up {
+        justify-content: space-around;
+    }
+
+    &-item {
+        @include sm-down {
+            &:last-child {
+                flex-basis: 100%;
+                text-align: center;
+            }
+        }
+        
+        h3 {
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            font-weight: $fw-semibold;
+
+            span {
+                font-size: calc(#{$base-font-size} + 2px);
+                line-height: calc(#{$base-line-height} + 8px);
+                font-weight: $fw-extrabold;
+                text-transform: uppercase;
+            }
+        }
+
+        p {
+            font-size: calc(#{$base-font-size} - 6px);
+            line-height: calc(#{$base-line-height} - 2px);
+            text-transform: uppercase;
+        }
+
+        .btn-deals {
+            background-color: $black;
+            border: none;
+            font-weight: $fw-semibold;
+            font-size: calc(#{$base-font-size} + 2px);
+            line-height: calc(#{$base-line-height} + 8px);
+    
+            &:hover {
+                background-color: lighten($black, 8);
+            }
+        }
+    }
+}

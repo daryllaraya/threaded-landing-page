@@ -1,3 +1,30 @@
 @use 'abstracts' as *;
 
 /***** NEWSLETTER *****/
+.nl-container {
+    padding: $base-padding * 2;
+}
+
+.newsletter {
+    justify-content: unset;
+    flex-direction: column;
+
+    @include md-up {
+        justify-content: space-between;
+        flex-direction: row;
+    }
+
+    &-item {
+        h3 {
+            color: $white;
+            text-transform: uppercase;
+            margin-bottom: $base-margin;
+            text-align: center;
+
+            @include md-up {
+                margin-bottom: unset;
+                text-align: left;
+            }
+        }
+    }
+}

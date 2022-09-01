@@ -1,3 +1,66 @@
 @use 'abstracts' as *;
 
 /***** RECENTLY BOUGHT *****/
+.recently-container {
+    h2 {
+        text-align: center;
+        margin-bottom: $base-margin * 3;
+    }
+}
+
+.recent {
+    justify-content: space-between;
+    flex-direction: column;
+    gap: $base-margin * 3;
+    margin-bottom: $base-margin;
+
+    @include md-up {
+        flex-direction: row;
+        margin-bottom: $base-margin * 2;
+    }
+
+    @include xl-down {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    @include md-down {
+        flex-direction: row;
+        
+    }
+
+    &-item {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 225px;
+
+        p {
+            line-height: calc(#{$base-line-height} + 4px);
+            margin-top: $base-margin;
+        }
+
+        .item-price {
+            & > span {
+                margin-right: $base-margin * 2;
+
+                &:last-child {
+                    margin-right: unset;
+                }
+            }
+        }
+
+        .current-price, .old-price {
+            font-weight: $fw-semibold;
+        }
+
+        .sale-price {
+            color: $dark-muted-red;
+            font-weight: $fw-extrabold;
+        }
+
+        .old-price {
+            text-decoration: line-through;
+        }
+    }
+}

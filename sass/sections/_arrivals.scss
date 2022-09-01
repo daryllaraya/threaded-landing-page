@@ -1,3 +1,74 @@
 @use 'abstracts' as *;
 
 /***** NEW ARRIVALS *****/
+.new-arrivals-bg {
+    background-image: url('/assets/new-arrivals/new-arrivals-bg.jpg');
+    background-size: cover;
+    background-position: unset;
+    background-repeat: no-repeat;
+    height: auto;
+
+    @include lg-up {
+        height: 400px;
+        background-position: center;
+    }
+}
+
+.arrivals-container {
+    justify-content: center;
+
+    @include md-up {
+        justify-content: flex-end; 
+    }
+
+    .arrivals-content {
+        flex-basis: 100%;
+        text-align: center;
+
+        @include lg-up {
+            flex-basis: 480px;
+            text-align: left;
+        }
+    }
+
+    h3 {
+        color: $white;
+        font-size: $base-font-size * 3.5;
+        line-height: $base-line-height * 3.75;
+        text-transform: uppercase;
+
+        @include md-up {
+            font-size: $base-font-size * 5.375;
+            line-height: $base-line-height * 6.1;
+        }
+    }
+
+    p {
+        color: $white;
+        font-size: $base-font-size * 1.25;
+        line-height: $base-line-height * 1.45;
+
+        @include md-up {
+            font-size: $base-font-size * 1.75;
+            line-height: $base-line-height * 2.45;
+        }
+    }
+
+    .btn-arrivals {
+        background-color: $white;
+        color: $black;
+        border: none;
+        font-size: calc(#{$base-font-size} + 2px);
+        line-height: calc(#{$base-line-height} + 8px);
+        font-weight: $fw-semibold;
+        margin-top: $base-margin;
+
+        @include md-up {
+            margin-top: $base-margin * 2;
+        }
+
+        &:hover {
+            background-color: darken($white, 10);
+        }
+    }
+}

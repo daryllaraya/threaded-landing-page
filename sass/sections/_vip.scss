@@ -1,0 +1,100 @@
+@use 'abstracts' as *;
+
+/***** VIP EXCLUSIVE *****/
+.vip-exclusive-bg {
+    background-color: $black;
+    background-image: url('/assets/vip/vip-bg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: right;
+
+    @include lg-up {
+        background-size: contain;
+        background-position: initial;
+    }
+}
+
+.vip {
+    padding: $base-padding * 2;
+
+    @include lg-up {
+        padding: $base-padding;
+    }
+
+    &-container {
+        justify-content: unset;
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+
+        @include lg-up {
+            flex-direction: row;
+            justify-content: space-between;
+            text-align: left;
+        }
+    }
+
+    &-item {
+        &:nth-child(1) {
+            flex-basis: 100%;
+
+            @include lg-up {
+                flex-basis: 520px;
+            }
+        }
+    
+        &:nth-child(2) {
+            flex-basis: 100%; 
+
+            @include lg-up {
+                flex-basis: 350px;
+            }
+        }
+    
+        &:nth-child(3) {
+            flex-basis: 100%;
+
+            @include lg-up {
+                flex-basis: 180px;
+            }
+        }
+    
+        h3, p {
+            color: $white;
+            text-transform: uppercase;
+            margin-bottom: $base-margin;
+
+            @include lg-up {
+                margin-bottom: 0;
+            }
+        }
+
+        p {
+            font-size: $base-font-size;
+            line-height: calc(#{$base-line-height} + 4px);
+
+            @include md-up {
+                font-size: calc(#{$base-font-size} + 2px);
+                line-height: calc(#{$base-line-height} + 8px);
+            }
+        }
+    
+        .btn-vip {
+            background-color: $white;
+            color: $black;
+            border: none;
+            font-weight: $fw-semibold;
+            margin-top: $base-margin;
+            font-size: calc(#{$base-font-size} + 2px);
+            line-height: calc(#{$base-line-height} + 8px);
+
+            @include lg-up {
+                margin-top: unset;
+            }
+
+            &:hover {
+                background-color: darken($white, 10);
+            }
+        }
+    }
+}

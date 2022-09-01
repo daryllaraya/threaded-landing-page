@@ -1,0 +1,44 @@
+@use 'abstracts' as *;
+
+/***** FORM *****/
+.input-group {
+    .btn-nl {
+        background-color: $white;
+        border-radius: unset;
+        padding: calc(#{$base-padding} - 6px) $base-padding;
+
+        img {
+            transition: 0.3s all ease;
+        }
+        
+        &:hover, &:focus {
+            border-color: transparent;
+        }
+
+        &:hover {
+            img {
+                transform: translateX(4px);
+            }
+        }
+    }
+}
+
+.form-control {
+    background-color: $light-gray;
+    border-radius: unset;
+    font-size: calc(#{$base-font-size} - 2px);
+    color: $black;
+    border: none;
+    padding: calc(#{$base-padding} - 6px) $base-padding * 1.5;
+
+    &::placeholder {
+        color: $dark-gray;
+    }
+
+    &:focus {
+        background-color: $light-gray;
+        color: $black;
+        border-color: unset;
+        box-shadow: none;
+    }
+}

@@ -1,3 +1,18 @@
 @use 'abstracts' as *;
 
 /***** BUTTON *****/
+.btn {
+    padding: calc(#{$base-padding} - 6px) calc(#{$base-padding} + 4px);
+    text-transform: uppercase;
+    border-radius: unset;
+    transition: 0.3s all ease;
+    transform: translateY(0);
+
+    &:focus, &:active, &:active:focus {
+        box-shadow: none;
+    }
+
+    &:hover {
+        transform: translateY(4px);
+    }
+}
