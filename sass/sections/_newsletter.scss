@@ -26,5 +26,11 @@
                 text-align: left;
             }
         }
+
+        .btn-nl {
+            &:hover {
+                transform: translateY(0);
+            }
+        }
     }
 }

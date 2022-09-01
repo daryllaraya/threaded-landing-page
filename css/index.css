@@ -1126,3 +1126,7 @@ p {
     text-align: left;
   }
 }
+.newsletter-item .btn-nl:hover {
+  -webkit-transform: translateY(0);
+  transform: translateY(0);
+}
