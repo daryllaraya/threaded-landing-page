@@ -684,7 +684,7 @@ p {
 /***** VIP EXCLUSIVE *****/
 .vip-exclusive-bg {
   background-color: #000;
-  background-image: url("assets/vip/vip-bg.jpg");
+  background-image: url("/assets/vip/vip-bg.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: right;
@@ -878,7 +878,7 @@ p {
 
 /***** NEW ARRIVALS *****/
 .new-arrivals-bg {
-  background-image: url("assets/new-arrivals/new-arrivals-bg.jpg");
+  background-image: url("/assets/new-arrivals/new-arrivals-bg.jpg");
   background-size: cover;
   background-position: unset;
   background-repeat: no-repeat;
