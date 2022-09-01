@@ -173,7 +173,7 @@ p {
 }
 .dropdown-toggle::after {
   content: "";
-  background-image: url("/assets/icons/flag/arrow-down-icon.png");
+  background-image: url("../assets/icons/flag/arrow-down-icon.png");
   border: none;
   width: 10px;
   height: 10px;
@@ -261,11 +261,11 @@ p {
 }
 
 .carousel-control-next-icon {
-  background-image: url("/assets/icons/slider/next-icon.png");
+  background-image: url("../assets/icons/slider/next-icon.png");
 }
 
 .carousel-control-prev-icon {
-  background-image: url("/assets/icons/slider/prev-icon.png");
+  background-image: url("../assets/icons/slider/prev-icon.png");
 }
 
 .carousel-control-next-icon, .carousel-control-prev-icon {
@@ -684,7 +684,7 @@ p {
 /***** VIP EXCLUSIVE *****/
 .vip-exclusive-bg {
   background-color: #000;
-  background-image: url("/assets/vip/vip-bg.jpg");
+  background-image: url("../assets/vip/vip-bg.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: right;
@@ -878,7 +878,7 @@ p {
 
 /***** NEW ARRIVALS *****/
 .new-arrivals-bg {
-  background-image: url("/assets/new-arrivals/new-arrivals-bg.jpg");
+  background-image: url("../assets/new-arrivals/new-arrivals-bg.jpg");
   background-size: cover;
   background-position: unset;
   background-repeat: no-repeat;
